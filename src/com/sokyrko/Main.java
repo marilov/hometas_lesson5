@@ -5,12 +5,14 @@ public class Main {
     public static void main(String[] args) {
 
         int[] arrayNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int[] arrayCopy = arrayNumbers.clone();
 
         findRepeatedNumbers(arrayNumbers);
         findSum(arrayNumbers);
         deleteElement(arrayNumbers);
         findAverage(arrayNumbers);
         diagonalElements(arrayNumbers);
+        copyArray(arrayNumbers, arrayCopy);
 
     }
 
@@ -93,6 +95,13 @@ public class Main {
                 }
                 System.out.print(" " + arrayNumbers[j]);
             }
+        }
+    }
+    //Task_6: Program clones array
+
+    public static void copyArray(int[] arrayNumbers, int[] arrayCopy) {
+        for (int i = 0; i < arrayCopy.length; i++) {
+            System.out.println("\n" + "Новый массив: " + arrayCopy[i] + " ");
         }
     }
 }
