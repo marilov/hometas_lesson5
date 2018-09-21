@@ -110,12 +110,11 @@ public class Main {
     //Task_6: Program sums arrays
 
     public static void sumArrays(int[] arrayNumbers, int[] arrayNumbers2) {
-        int[] arraySum = {arrayNumbers2.length};
-        int k = 0;
+        int[] arraySum = new int[arrayNumbers2.length];
 
         for (int i = 0; i < arrayNumbers2.length; i++) {
-                arraySum[k] = arrayNumbers2[i] + arrayNumbers[i];
-                System.out.println("\n" + "Сумма двух массивов: " + arraySum[k] + " ");
+                arraySum[i] = arrayNumbers2[i] + arrayNumbers[i];
+                System.out.println("\n" + "Сумма двух массивов: " + arraySum[i] + " ");
         }
     }
 }
