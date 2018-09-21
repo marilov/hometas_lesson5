@@ -6,6 +6,7 @@ public class Main {
 
         int[] arrayNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         int[] arrayCopy = arrayNumbers.clone();
+        int[] arrayNumbers2 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         findRepeatedNumbers(arrayNumbers);
         findSum(arrayNumbers);
@@ -13,6 +14,7 @@ public class Main {
         findAverage(arrayNumbers);
         diagonalElements(arrayNumbers);
         copyArray(arrayNumbers, arrayCopy);
+        sumArrays(arrayNumbers, arrayNumbers2);
 
     }
 
@@ -102,6 +104,18 @@ public class Main {
     public static void copyArray(int[] arrayNumbers, int[] arrayCopy) {
         for (int i = 0; i < arrayCopy.length; i++) {
             System.out.println("\n" + "Новый массив: " + arrayCopy[i] + " ");
+        }
+    }
+
+    //Task_6: Program sums arrays
+
+    public static void sumArrays(int[] arrayNumbers, int[] arrayNumbers2) {
+        int[] arraySum = {arrayNumbers2.length};
+        int k = 0;
+
+        for (int i = 0; i < arrayNumbers2.length; i++) {
+                arraySum[k] = arrayNumbers2[i] + arrayNumbers[i];
+                System.out.println("\n" + "Сумма двух массивов: " + arraySum[k] + " ");
         }
     }
 }
