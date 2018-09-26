@@ -176,3 +176,19 @@ class DeleteNumbers {
         return str.replaceAll("[0-9]+","");
     }
 }
+
+
+//Removing spaces from String
+
+class DeleteSpaces {
+
+    static String str = new String(" H E   LL O     ");
+
+    public static void main(String[] args){
+        System.out.println(removeSpaces(str));
+    }
+
+    public static String removeSpaces(String str){
+        return str.replaceAll("[ ]+", "");
+    }
+}
