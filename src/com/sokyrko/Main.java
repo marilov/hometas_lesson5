@@ -167,13 +167,13 @@ class DeleteNumbers {
 
     static String str = new String("Hello, I am 24, I am from Ukraine");
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         System.out.println(removeNumbers(str));
     }
 
-    public static String removeNumbers(String args){
-        return str.replaceAll("[0-9]+","");
+    public static String removeNumbers(String args) {
+        return str.replaceAll("[0-9]+", "");
     }
 }
 
@@ -184,11 +184,49 @@ class DeleteSpaces {
 
     static String str = new String(" H E   LL O     ");
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println(removeSpaces(str));
     }
 
-    public static String removeSpaces(String str){
+    public static String removeSpaces(String str) {
         return str.replaceAll("[ ]+", "");
     }
 }
+
+// Кодировка слова (M am a m i a: M3A3i1)
+//M - leave as it is
+//am - replace to 3
+//a [3] replace to A
+//m [4] replace to 3
+//i - leave as it is
+//last a - replace to 1
+
+class DecodeWord {
+
+    static String str = new String("Mamamia");
+
+    public static void main(String[] args) {
+        System.out.println(codeWord(str));
+    }
+
+    public static String convertToArray(String str) {
+
+        char[] ch1 = str.toCharArray();
+
+        for (char element : ch1) {
+
+            ch1[3] = 'A';
+            ch1[4] = '3';
+            ch1[6] = '1';
+        }
+        return new String(ch1);
+    }
+
+    public static String codeWord(String str) {
+
+        return convertToArray(str).replaceAll("am", "3");
+    }
+
+}
+
+
